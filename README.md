@@ -30,7 +30,7 @@ This is simple application and does not include scaling part.
     3. Testing
 ### Getting started
 #### Requirements
-    Docker latest version should be installed in local machine.
+    Docker latest version should be installed on local machine.
 #### Clone the repository 
     git clone https://github.com/navojha/docker-compose-flask-mysql-redis.git
     cd docker-compose-flask-mysql-redis
