@@ -3,7 +3,7 @@
 
 This repository contains flask application code. We can deploy it locally using docker-compose.
 Once we execute this though docker-compose it will create three containers - application, Redis and MySQL database.
-This is simple application and does not support scaling part. 
+This is simple application and does not include scaling part. 
           
     Backend application
         Model the following in the primary database
@@ -42,6 +42,8 @@ This is simple application and does not support scaling part.
      The entire stack - MySQL, Redis, and the backend application - will be deployable using docker-compose
 
     docker-compose up
+
+    docker-compose ps
 
                     Name                                Command               State           Ports         
     ----------------------------------------------------------------------------------------------------------
