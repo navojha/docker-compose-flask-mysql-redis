@@ -1,7 +1,7 @@
 
-# Flask Application
+# Web Application
 
-This repository contains flask application code. We can deploy it locally using docker-compose.
+This repository contains flask web application code. We can deploy it locally using docker-compose.
 Once we execute this though docker-compose it will create three containers - application, Redis and MySQL database.
 This is simple application and does not include scaling part. 
 
