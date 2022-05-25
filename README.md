@@ -43,12 +43,12 @@ This is simple application and does not support scaling part.
 
     docker-compose up
 
-    docker ps
+                    Name                                Command               State           Ports         
+    ----------------------------------------------------------------------------------------------------------
+    docker-compose-flask-mysql-redis_app_1     /bin/sh -c flask run --hos ...   Up      0.0.0.0:8083->8083/tcp
+    docker-compose-flask-mysql-redis_mysql_1   docker-entrypoint.sh mysqld      Up      3306/tcp, 33060/tcp   
+    docker-compose-flask-mysql-redis_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp              
 
-    CONTAINER ID   IMAGE                COMMAND                  CREATED         STATUS         PORTS                    NAMES
-    9e5623135a0d   flask-redis:1.0      "/bin/sh -c 'flask r…"   9 minutes ago   Up 9 minutes   0.0.0.0:8083->8083/tcp   docker-compose-flask-mysql-redis_app_1
-    bb7ba8d3402f   mysql:8.0            "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   3306/tcp, 33060/tcp      docker-compose-flask-mysql-redis_mysql_1
-    06ca82f4cce2   redis:6.2.7-alpine   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   6379/tcp                 docker-compose-flask-mysql-redis_redis_1
 ### Testing
 ##### Create Player Table
 localhost:8083
