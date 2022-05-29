@@ -7,7 +7,7 @@ This is simple application and does not include scaling part.
 
 ### Architecture
 
-![Architecture](https://github.com/navojha/docker-compose-flask-mysql-redis/blob/main/Screenshots/Architecture%20(1).png?raw=true)
+![Architecture](https://github.com/navojha/docker-compose-flask-mysql-redis/blob/main/Screenshots/Architecture.png?raw=true)
 
           
     Backend application
