@@ -143,3 +143,6 @@ This will create the player table.
     redis_1  | 1:M 25 May 2022 11:57:46.785 * Running mode=standalone, port=6379.
     redis_1  | 1:M 25 May 2022 11:57:46.785 # Server initialized
     redis_1  | 1:M 25 May 2022 11:57:46.786 * Ready to accept connections
+    
+    
+    docker-compose down
