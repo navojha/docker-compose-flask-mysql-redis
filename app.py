@@ -5,12 +5,12 @@ from flask_mysqldb import MySQL
 app = Flask(__name__,template_folder='templates')
 
 
-redis = Redis(host="redis", db=0, socket_timeout=5, charset="utf-8", decode_responses=True)
+redis = Redis(host="redis.hx8pzn.ng.0001.use2.cache.amazonaws.com", db=0, socket_timeout=5, charset="utf-8", decode_responses=True)
 
 #code for connection
 app.config['MYSQL_USER'] = 'myuser'
 app.config['MYSQL_PASSWORD'] = 'mypassword'
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'mydb.cjlapcgqhru5.us-east-2.rds.amazonaws.com'
 app.config['MYSQL_DB'] = 'mydb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
@@ -23,7 +23,7 @@ def index():
     cur.execute(''' CREATE TABLE players(identifier varchar(255), name varchar(20) UNIQUE, amountofgold int(11)) ''')
     mysql.connection.commit()
     cur.close()
-    return 'Player Table create !'
+    return render_template('player_table_created.html')
 
 @app.route('/Createplayer', methods=['POST', 'GET'])
 def Createplayer():
@@ -40,7 +40,7 @@ def Createplayer():
         cur.execute("INSERT INTO players(identifier,name) VALUES(%s, %s)",(identifier,name))
         mysql.connection.commit()
         cur.close()
-        return 'Great ! You Have Successfully Registered The Player!'
+        return render_template('player_created.html')
     return render_template('index.html')
 
 @app.route('/Getplayer')
